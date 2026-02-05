@@ -10,6 +10,8 @@ def petal(t, r, angle):
     angle: angle (degrees) that subtends the arcs
     """
     for i in range(2):
+        arc(t, r, angle)
+        t.lt(180-angle)
 
 
 def flower(t, n, r, angle):
@@ -21,6 +23,8 @@ def flower(t, n, r, angle):
     angle: angle (degrees) that subtends the arcs
     """
     for i in range(n):
+        petal(t, r, angle)
+        t.lt(360.0/n)
 
 
 def move(t, length):
@@ -34,7 +38,7 @@ def move(t, length):
 
 bob = turtle.Turtle()
 
-# draw a sequence of three flowers
+# draw a sequence of three flowers, as shown in the book.
 move(bob, -100)
 flower(bob, 7, 60.0, 60.0)
 
