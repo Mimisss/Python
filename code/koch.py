@@ -2,7 +2,7 @@ import turtle
 
 
 def koch(t, n):
-    """Draws a koch curve with length n."""
+    """Draws a koch curve with length n."""    
     if n < 10:
         t.fd(n)
         return
@@ -24,6 +24,8 @@ def snowflake(t, n):
 
 
 bob = turtle.Turtle()
+
+bob.speed(0)
 
 bob.pu()
 bob.goto(-150, 90)
